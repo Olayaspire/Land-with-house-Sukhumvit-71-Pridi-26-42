@@ -1,56 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Land with House – Sukhumvit 71</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Land with House Sukhumvit 71</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 30px;
-    }
-    .card {
-      max-width: 1000px;
-      margin: auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    h1 {
-      margin-top: 0;
-    }
-    .location {
-      color: #666;
-      margin-bottom: 20px;
-    }
-    img {
-      width: 100%;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-  </style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  max-width: 900px;
+  margin: auto;
+}
+
+.main img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.thumbs img {
+  height: 100px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.7;
+}
+
+.thumbs img:hover {
+  opacity: 1;
+}
+</style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>Land with House – Sukhumvit 71</h1>
-  <div class="location">
-    Pridi Banomyong 26–42 • Near BTS Ekkamai
+<h1>Land with House Sukhumvit 71</h1>
+
+<div class="gallery">
+  <div class="main">
+    <img id="mainImage" src="1.jpg">
   </div>
 
-  <p>
-    Prime location land with existing house.  
-    Suitable for residence or redevelopment.
-  </p>
-
-  <!-- รูปจากไฟล์ที่คุณอัปโหลดแล้ว -->
-  <img src="1.jpg" alt="Property image">
+  <div class="thumbs">
+    <img src="1.jpg" onclick="change(this)">
+    <img src="582085057_10163283158769730_3007733827.jpg" onclick="change(this)">
+    <img src="583333757_10163283158949730_7059394537.jpg" onclick="change(this)">
+    <img src="584319251_10163283158839730_5101949832.jpg" onclick="change(this)">
+    <img src="584419947_10163283159044730_8363786692.jpg" onclick="change(this)">
+  </div>
 </div>
+
+<script>
+function change(img) {
+  document.getElementById("mainImage").src = img.src;
+}
+</script>
 
 </body>
 </html>
